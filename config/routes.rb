@@ -2,7 +2,12 @@ Rails.application.routes.draw do
   root 'articles#index'
 
   resources :payments, only: [:show]
-  resources :orders, only: [:index, :show, :create]
+  resources :orders, only: [:index, :show, :create] do
+    member do
+      get :pay
+      patch :please_pay
+    end
+  end 
 
   resources :articles do
     member do
@@ -20,6 +25,10 @@ Rails.application.routes.draw do
       delete :logout
     end
   end
+
+  
+
+
 
   namespace :api do
     namespace :v1 do

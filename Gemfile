@@ -72,3 +72,8 @@ group :test do
 end
 
 gem "tailwindcss-rails", "~> 2.0"
+
+gem "annotate", "~> 3.2"
+gem "braintree", "~> 4.12"
+gem "aasm", "~> 5.5"
+

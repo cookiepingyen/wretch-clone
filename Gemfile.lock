@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    aasm (5.5.0)
+      concurrent-ruby (~> 1.0)
     actioncable (7.0.6)
       actionpack (= 7.0.6)
       activesupport (= 7.0.6)
@@ -68,9 +70,15 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
+    annotate (3.2.0)
+      activerecord (>= 3.2, < 8.0)
+      rake (>= 10.4, < 14.0)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
+    braintree (4.12.0)
+      builder (>= 3.2.4)
+      rexml (>= 3.1.9)
     builder (3.2.4)
     capybara (3.39.2)
       addressable
@@ -218,9 +226,13 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  arm64-darwin-22
 
 DEPENDENCIES
+  aasm (~> 5.5)
+  annotate (~> 3.2)
   bootsnap
+  braintree (~> 4.12)
   capybara
   debug
   image_processing (~> 1.2)
